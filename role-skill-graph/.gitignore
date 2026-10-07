@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+env/
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+
+# Nested duplicate (accidental)
+role-skill-graph/
+
+# Large raw data
+data/raw/*.csv
+data/raw/*.xlsx
+
+# Excluded derived files
+data/processed/role_skill.csv
+
+# Debug scripts
+src/check_data.py
+src/inspect_new.py
+
+# Zip files
+*.zip
+*_BACKUP.zip
