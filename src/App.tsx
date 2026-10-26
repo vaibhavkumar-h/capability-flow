@@ -41,6 +41,7 @@ import {
 import { supabase } from "./lib/supabase";
 import UniversityApp from "./university/UniversityApp";
 import RecruiterApp from "./recruiter/RecruiterApp";
+import StudentApp from "./student/StudentApp";
 
 /* =========================================================
    FLOW DATA
@@ -1167,10 +1168,10 @@ function Login() {
                 return;
             }
 
-            /*
-             * Student and recruiter dashboards will be
-             * connected when those portals are built.
-             */
+            if (roleKey === "student") {
+                navigate("/student");
+                return;
+            }
 
             navigate(`/dashboard/${roleKey}`);
         } catch (err) {
@@ -1722,6 +1723,8 @@ export default function App() {
                 path="/login"
                 element={<RoleSelection />}
             />
+
+            <Route path="/student/*" element={<StudentApp />} />
 
             <Route path="/recruiter/*" element={<RecruiterApp />} />
 
